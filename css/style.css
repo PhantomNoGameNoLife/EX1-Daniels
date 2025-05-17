@@ -101,6 +101,35 @@ ul {
     margin: 0 auto;
 }
 
+
+.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: endloading 2s 1s forwards ease-in-out;
+    -webkit-animation: endloading 2s 1s forwards ease-in-out;
+    /* forwards for save the final state */
+}
+
+.loading::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 10px solid #e8e8e8;
+    border-top: 10px solid #000;
+    animation: rotate 1.2s infinite linear;
+    -webkit-animation: rotate 1.2s infinite linear;
+}
+
 /* *************************** start nav **************************** */
 .navbar {
     background-color: rgba(0, 0, 0, 0.25);
