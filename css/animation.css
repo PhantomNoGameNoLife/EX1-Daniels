@@ -1,0 +1,306 @@
+/* animation typing */
+
+@keyframes typingCycle {
+    /* Developer: 0% to 33.33% */
+    0% {
+        content: "|";
+    }
+
+    1.67% {
+        content: "D|";
+    }
+
+    3.33% {
+        content: "De|";
+    }
+
+    5% {
+        content: "Dev|";
+    }
+
+    6.67% {
+        content: "Deve|";
+    }
+
+    8.33% {
+        content: "Devel|";
+    }
+
+    10% {
+        content: "Develo|";
+    }
+
+    11.67% {
+        content: "Develop|";
+    }
+
+    13.33% {
+        content: "Develope|";
+    }
+
+    15% {
+        content: "Developer|";
+    }
+
+    16.67% {
+        content: "Developer|";
+    }
+
+    18.33% {
+        content: "Develope|";
+    }
+
+    20% {
+        content: "Develop|";
+    }
+
+    21.67% {
+        content: "Develo|";
+    }
+
+    23.33% {
+        content: "Devel|";
+    }
+
+    25% {
+        content: "Deve|";
+    }
+
+    26.67% {
+        content: "Dev|";
+    }
+
+    28.33% {
+        content: "De|";
+    }
+
+    30% {
+        content: "D|";
+    }
+
+    31.67% {
+        content: "|";
+    }
+
+    33.33% {
+        content: "|";
+    }
+
+    /* Designer: 33.33% to 66.67% */
+    35% {
+        content: "D|";
+    }
+
+    36.67% {
+        content: "De|";
+    }
+
+    38.33% {
+        content: "Des|";
+    }
+
+    40% {
+        content: "Desi|";
+    }
+
+    41.67% {
+        content: "Desig|";
+    }
+
+    43.33% {
+        content: "Design|";
+    }
+
+    45% {
+        content: "Designe|";
+    }
+
+    46.67% {
+        content: "Designer|";
+    }
+
+    48.33% {
+        content: "Designer|";
+    }
+
+    50% {
+        content: "Designe|";
+    }
+
+    51.67% {
+        content: "Design|";
+    }
+
+    53.33% {
+        content: "Desig|";
+    }
+
+    55% {
+        content: "Desi|";
+    }
+
+    56.67% {
+        content: "Des|";
+    }
+
+    58.33% {
+        content: "De|";
+    }
+
+    60% {
+        content: "D|";
+    }
+
+    61.67% {
+        content: "|";
+    }
+
+    66.67% {
+        content: "|";
+    }
+
+    /* Larry Daniel: 66.67% to 100% */
+    68.33% {
+        content: "L|";
+    }
+
+    70% {
+        content: "La|";
+    }
+
+    71.67% {
+        content: "Lar|";
+    }
+
+    73.33% {
+        content: "Larr|";
+    }
+
+    75% {
+        content: "Larry|";
+    }
+
+    76.67% {
+        content: "Larry |";
+    }
+
+    78.33% {
+        content: "Larry D|";
+    }
+
+    80% {
+        content: "Larry Da|";
+    }
+
+    81.67% {
+        content: "Larry Dan|";
+    }
+
+    83.33% {
+        content: "Larry Dani|";
+    }
+
+    85% {
+        content: "Larry Danie|";
+    }
+
+    86.67% {
+        content: "Larry Daniel|";
+    }
+
+    88.33% {
+        content: "Larry Daniel|";
+        /* Hold full word */
+    }
+
+    90% {
+        content: "Larry Danie|";
+    }
+
+    91.67% {
+        content: "Larry Dani|";
+    }
+
+    93.33% {
+        content: "Larry Dan|";
+    }
+
+    95% {
+        content: "Larry Da|";
+    }
+
+    96.67% {
+        content: "Larry D|";
+    }
+
+    97.22% {
+        content: "Larry |";
+    }
+
+    97.78% {
+        content: "Larry|";
+    }
+
+    98.33% {
+        content: "Larr|";
+    }
+
+    98.89% {
+        content: "Lar|";
+    }
+
+    99.44% {
+        content: "La|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+
+/* animation counter */
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes counter1 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 850;
+    }
+}
+
+@keyframes counter2 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 230;
+    }
+}
+
+@keyframes counter3 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 9450;
+    }
+}
+
+@keyframes counter4 {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 780;
+    }
+}

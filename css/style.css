@@ -1,0 +1,656 @@
+:root {
+    --main-color: #343434;
+    --secondary-bg-color: #1c1c1c;
+    --link-bg-color: #111;
+    --p-color-primary: #748182;
+    --p-color-secondary: #999;
+    --span-color-secondary: #888;
+    --section-bg-color: #f7f7f7;
+    --icon-bg-color: #f4f4f4;
+    --dot-color: #d6d6d6;
+    --dot-active-color: #869791;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--p-color-primary);
+    font-size: .9375rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--main-color);
+    font-size: 1.875rem;
+}
+
+span {
+    color: var(--p-color-secondary);
+    font-size: .875rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bg-color {
+    background-color: var(--section-bg-color);
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.fs-50 {
+    font-size: 3.125rem;
+}
+
+.fs-30 {
+    font-size: 1.875rem;
+}
+
+.fs-15 {
+    font-size: .9375rem;
+}
+
+.py-100-70 {
+    padding: 6.25rem 0 4.375rem;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.header-section h2 {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 900;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.header-section h2::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background: url(../imgs/dots.png) repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.max-w-945 {
+    max-width: 945px;
+    margin: 0 auto;
+}
+
+/* *************************** start nav **************************** */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.navbar-nav {
+    --bs-nav-link-color: var(--main-color);
+    --bs-nav-link-hover-color: var(--main-color);
+    --bs-navbar-active-color: var(--main-color);
+    background-color: #fff;
+    --bs-navbar-nav-link-padding-x: 1rem;
+}
+
+.nav-link {
+    line-height: 1;
+    width: fit-content;
+    font-size: .875rem;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    --bs-navbar-toggler-border-color: transparent;
+    --bs-navbar-toggler-focus-width: none;
+}
+
+.btn-custom {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    font-size: .8125rem;
+    padding: .625rem 1.875rem;
+}
+
+/* *************************** end nav **************************** */
+
+/* *************************** start header **************************** */
+
+.header {
+    min-height: 100dvh;
+    background: linear-gradient(rgba(0, 0, 0, 0.65)), url("./../imgs/bg.jpg") no-repeat left/cover;
+    background-attachment: fixed;
+}
+
+.header .social-media a {
+    color: #fff;
+}
+
+.header .social-media li {
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.header h1::after {
+    content: "";
+    animation: typingCycle 6s infinite ease-in-out;
+    -webkit-animation: typingCycle 6s infinite ease-in-out;
+}
+
+/* *************************** end header **************************** */
+
+/* *************************** start about **************************** */
+
+
+.about .hero-img:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 80%;
+    height: 80%;
+    background: url("./../imgs/dots.png") repeat;
+    z-index: -1;
+}
+
+.about .progress {
+    margin-bottom: 1.875rem;
+    height: 25px;
+}
+
+.about .progress .progress-bar {
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.about .progress .progress-bar span {
+    color: #fff;
+    font-size: .8125rem;
+}
+
+.about .btn-custom:first-child,
+.contact form .btn-custom {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--secondary-bg-color);
+    --bs-btn-border-color: var(--secondary-bg-color);
+    --bs-btn-hover-color: var(--secondary-bg-color);
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: var(--secondary-bg-color);
+}
+
+.about .btn-custom:last-child {
+    --bs-btn-color: var(--secondary-bg-color);
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: var(--secondary-bg-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--secondary-bg-color);
+    --bs-btn-hover-border-color: var(--secondary-bg-color);
+}
+
+/* *************************** end about **************************** */
+
+/* *************************** start services **************************** */
+.services .card {
+    padding: 2.125rem .25rem;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.services .circle,
+.contact .circle {
+    height: 70px;
+    width: 70px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.25rem;
+    color: var(--main-color);
+    background-color: var(--icon-bg-color);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.services .card:hover .circle,
+.contact .inner:hover .circle {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+.services .card-body h3 {
+    color: var(--main-color);
+    font-size: 1.125rem;
+    font-weight: 800;
+    margin-bottom: .9375rem;
+}
+
+.services .card-body p {
+    color: var(--p-color-primary);
+    font-size: .875rem;
+}
+
+/* ********************************* end services ********************************* */
+
+/* *************************** start portfolio **************************** */
+.fig {
+    margin-bottom: 0;
+}
+
+.portfolio .figcap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+
+.portfolio .fig::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.portfolio .figcap h3,
+.portfolio .figcap div,
+.portfolio .fig::before {
+    opacity: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+}
+
+.portfolio .figcap h3 {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+.portfolio .figcap div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.portfolio .figcap a {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--link-bg-color);
+    background-color: var(--link-bg-color);
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .figcap a:hover {
+    background-color: #fff;
+    color: var(--link-bg-color);
+}
+
+
+.portfolio .fig:hover::before,
+.portfolio .fig:hover .figcap div,
+.portfolio .fig:hover .figcap h3 {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.nav-pills .nav-link {
+    --bs-nav-link-color: #222;
+    --bs-nav-link-hover-color: #222;
+    --bs-nav-pills-link-active-bg: transparent;
+    --bs-nav-pills-link-active-color: #222;
+    --bs-nav-link-font-weight: 900;
+    font-size: 1rem;
+}
+
+.nav-pills .nav-link::after {
+    position: relative;
+    bottom: -8px;
+}
+
+.carousel-control-prev-icon {
+    position: absolute;
+    right: 150%;
+}
+
+.carousel-control-next-icon {
+    position: absolute;
+    left: 150%;
+}
+
+/* *************************** end portfolio **************************** */
+
+
+/* *************************** start client **************************** */
+.client h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .3125rem;
+}
+
+.client p {
+    line-height: 1.6;
+    word-spacing: 2px;
+}
+
+.client span {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--span-color-secondary);
+    margin-bottom: 1.875rem;
+}
+
+.carousel-item .inner img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background-color: var(--dot-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.carousel-indicators .active,
+.carousel-indicators [data-bs-target]:hover {
+    background-color: var(--dot-active-color);
+}
+
+/* *************************** end client **************************** */
+
+/* *************************** start state **************************** */
+.state i {
+    color: var(--main-color);
+}
+
+.state h3 {
+    font-weight: 900;
+}
+
+.state span {
+    font-weight: 600;
+    font-size: .9375rem;
+    color: var(--p-color-primary);
+}
+
+/* animation counter */
+#state1 {
+    counter-reset: num var(--num);
+    animation: counter1 10s infinite ease-in-out;
+    -webkit-animation: counter1 10s infinite ease-in-out;
+}
+
+#state1::after {
+    content: counter(num);
+}
+
+#state2 {
+    counter-reset: num var(--num);
+    animation: counter2 10s infinite ease-in-out;
+    -webkit-animation: counter2 10s infinite ease-in-out;
+}
+
+#state2::after {
+    content: counter(num);
+}
+
+#state3 {
+    counter-reset: num var(--num);
+    animation: counter3 10s infinite ease-in-out;
+    -webkit-animation: counter3 10s infinite ease-in-out;
+}
+
+#state3::after {
+    content: counter(num);
+}
+
+#state4 {
+    counter-reset: num var(--num);
+    animation: counter4 10s infinite ease-in-out;
+    -webkit-animation: counter4 10s infinite ease-in-out;
+}
+
+#state4::after {
+    content: counter(num);
+}
+
+/* *************************** end state **************************** */
+
+/* *************************** start team **************************** */
+.team .card-body {
+    background-color: rgba(52, 52, 52, .8);
+    padding: 26px;
+}
+
+.team .card-body h3 {
+    font-size: 1.5625rem;
+    margin-bottom: .3125rem;
+    color: #fff;
+}
+
+.team .card-body h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.team .card .social-media a {
+    color: #fff;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    display: block;
+    font-size: 1.25rem;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.team .card .social-media a:hover {
+    color: var(--main-color);
+    background-color: #fff;
+}
+
+.team .social-media {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    opacity: 0;
+    margin-bottom: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+    -webkit-transform: rotateY(180deg) scale(0.5, 0.5);
+    -moz-transform: rotateY(180deg) scale(0.5, 0.5);
+    -ms-transform: rotateY(180deg) scale(0.5, 0.5);
+    -o-transform: rotateY(180deg) scale(0.5, 0.5);
+    z-index: 2;
+}
+
+.team .card:hover .social-media {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1, 1);
+    -webkit-transform: rotateY(0deg) scale(1, 1);
+    -moz-transform: rotateY(0deg) scale(1, 1);
+    -ms-transform: rotateY(0deg) scale(1, 1);
+    -o-transform: rotateY(0deg) scale(1, 1);
+    cursor: pointer;
+}
+
+.team .card img {
+    aspect-ratio: 1/1;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.team .card img:hover,
+.team .social-media:hover+img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+/* *************************** end team **************************** */
+
+/* *************************** start contact **************************** */
+.form-control {
+    background: var(--icon-bg-color);
+    padding: .5625rem 1.125rem;
+    border: none;
+}
+
+.form-control:focus {
+    --bs-body-bg: var(--icon-bg-color);
+    box-shadow: none;
+}
+
+/* *************************** end contact **************************** */
+
+/* *************************** start footer **************************** */
+.footer {
+    background: var(--secondary-bg-color);
+    padding: 1.875rem;
+}
+
+.footer p {
+    font-size: .8125rem;
+    word-spacing: 2px;
+    margin-bottom: 0;
+}
+
+/* *************************** end footer **************************** */

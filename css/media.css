@@ -1,0 +1,24 @@
+/* start md */
+@media screen and (min-width: 768px) {
+    .navbar .nav-link::after {
+        background-color: #fff;
+    }
+
+    .navbar-nav {
+        --bs-nav-link-color: #fff;
+        --bs-nav-link-hover-color: #fff;
+        --bs-navbar-active-color: #fff;
+        background-color: transparent;
+    }
+
+    .fs-30 {
+        font-size: 2.75rem;
+    }
+}
+
+/* start lg */
+@media screen and (min-width: 1024px) {
+    .fs-30 {
+        font-size: 3.75rem;
+    }
+}
